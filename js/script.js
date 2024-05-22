@@ -22,17 +22,16 @@ function mostraNumeri(numeri) {
 const numeriCasuali = generaNumeriCasuali();
 mostraNumeri(numeriCasuali);
 
-//timer di 30 secondi
 setTimeout(() => {
     const container = document.getElementById('container');
-    container.innerHTML = ''; // rimuovo tutti i numeri dopo 10 secondi
+    container.innerHTML = ''; 
 
     const numeriInseriti = [];
     for (let i = 0; i < 5; i++) {
         const numero = parseInt(prompt("Inserisci uno dei numeri che hai visto:"));
         numeriInseriti.push(numero);
     }
-
+// timer 10 secondi 
     let numeriIndovinati = numeriInseriti.filter(numero => numeriCasuali.includes(numero));
     console.log("Numeri inseriti:", numeriInseriti);
     console.log("Numeri indovinati:", numeriIndovinati);
